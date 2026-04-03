@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  /* Light card — default */
+  .dash-card {
+    @apply bg-white rounded-2xl shadow-soft border border-surface-100 p-5 transition-all duration-300;
+  }
+
+  .dash-card-hover {
+    @apply dash-card hover:shadow-soft-md hover:-translate-y-0.5;
+  }
+
+  /* Dark mode card override */
+  .dark .dash-card,
+  .dark .dash-card-hover {
+    @apply bg-surface-800/80 border-surface-700/50 shadow-none;
+  }
+
+  /* Glass card (kept for sidebar/header) */
+  .glass-card {
+    @apply bg-white/80 dark:bg-surface-800/60 backdrop-blur-xl border border-surface-200/60 dark:border-surface-700/50 rounded-2xl shadow-lg shadow-surface-900/5 dark:shadow-black/20;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:shadow-xl hover:shadow-surface-900/10 dark:hover:shadow-black/30 hover:-translate-y-0.5 hover:border-surface-300/60 dark:hover:border-surface-600/60;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Pastel tinted cards */
+  .card-tint-blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  }
+  .dark .card-tint-blue {
+    background: linear-gradient(135deg, #1e3a5f30 0%, #1e293b 100%);
+  }
+
+  .card-tint-green {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  }
+  .dark .card-tint-green {
+    background: linear-gradient(135deg, #064e3b30 0%, #1e293b 100%);
+  }
+
+  .card-tint-rose {
+    background: linear-gradient(135deg, #ffe4e6 0%, #fff1f2 100%);
+  }
+  .dark .card-tint-rose {
+    background: linear-gradient(135deg, #4c051930 0%, #1e293b 100%);
+  }
+
+  .card-tint-purple {
+    background: linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%);
+  }
+  .dark .card-tint-purple {
+    background: linear-gradient(135deg, #2e106530 0%, #1e293b 100%);
+  }
+
+  /* Chart tooltip */
+  .recharts-tooltip-wrapper {
+    outline: none !important;
+  }
+
+  .custom-tooltip {
+    @apply dash-card p-3 !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
