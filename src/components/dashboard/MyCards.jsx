@@ -2,7 +2,7 @@ import { CreditCard } from 'lucide-react';
 
 const cards = [
   {
-    bank: 'FinDash',
+    bank: 'Moneta',
     type: 'VISA',
     number: '4455',
     holder: 'Jack Walson',
@@ -11,7 +11,7 @@ const cards = [
     accent: 'text-blue-600 dark:text-blue-400',
   },
   {
-    bank: 'FinDash',
+    bank: 'Moneta',
     type: 'VISA',
     number: '1599',
     holder: 'Jack Walson',

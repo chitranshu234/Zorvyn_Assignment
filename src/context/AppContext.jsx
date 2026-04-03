@@ -4,7 +4,7 @@ import { initialTransactions } from '../data/mockData';
 const AppContext = createContext(null);
 
 const VALID_ROLES = ['admin', 'viewer'];
-const STORAGE_KEY = 'finDash_state';
+const STORAGE_KEY = 'moneta_state';
 
 // safely validates a single transaction object
 function isValidTransaction(t) {

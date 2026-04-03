@@ -1,4 +1,4 @@
-# FinDash — Finance Dashboard
+# Moneta — Finance Dashboard
 
 A clean, interactive finance dashboard built with **React 19**, **Tailwind CSS v3**, and **Vite**.
 

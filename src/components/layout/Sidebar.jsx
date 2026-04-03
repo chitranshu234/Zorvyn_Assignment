@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../../context/AppContext';
-import { LayoutDashboard, ArrowRightLeft, Lightbulb, ChevronLeft, Wallet } from 'lucide-react';
+import { LayoutDashboard, ArrowRightLeft, Lightbulb, ChevronLeft, Landmark } from 'lucide-react';
 
 const NAV_ITEMS = [
   { path: '/', label: 'Dashboard', icon: LayoutDashboard },
@@ -37,12 +37,12 @@ export default function Sidebar() {
         aria-label="Main navigation"
       >
         <div className="h-16 flex items-center gap-3 px-5 border-b border-surface-200 dark:border-surface-800">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-brand-500/30">
-            <Wallet size={18} className="text-white" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-brand-500/30">
+            <Landmark size={18} className="text-white" />
           </div>
           {sidebarOpen && (
             <span className="text-lg font-bold text-surface-900 dark:text-white animate-fade-in">
-              Fin<span className="text-brand-500">Dash</span>
+              Mon<span className="text-brand-500">eta</span>
             </span>
           )}
         </div>
